@@ -18,14 +18,13 @@ public class Exercicio2 {
 		System.out.println("Em uma matriz NxM: ");
 		System.out.print("Digite o valor de N: ");
 		int n = sc.nextInt();
-		System.out.println();
 		System.out.print("Digite o valor de M: ");
 		int m = sc.nextInt();
 		int[][] mat = new int [n][m];
-		
+		System.out.println("Digite cada linha da Matriz: ");
 		for (int i=0; i<mat.length; i++) {
 			for (int j=0; j<mat[i].length; j++) {
-				mat[n][m] = sc.nextInt();
+				mat[i][j] = sc.nextInt();
 			}
 		}
 		
@@ -36,11 +35,20 @@ public class Exercicio2 {
 		for (int i=0; i<mat.length; i++) {
 			for (int j=0; j<mat[i].length; j++) {
 				if (mat[i][j] == x) {
-					System.out.println("Position "+ i + ","+ j);
-					System.out.println("Left "+ i + ","+ (j-1));
-					System.out.println("Right "+ i + ","+ (j+1));
-					System.out.println("Down "+ (i+1) + ","+ j);
-					System.out.println("up "+ (i-1) + ","+ j);
+					System.out.println("Position "+ i + ","+ j +":");
+					if (j>0) {
+						System.out.println("Left "+ mat[i][j-1]);						
+					}
+					if (j<mat[i].length-1) {
+						System.out.println("Right "+ mat[i][j+1]);
+					}
+					if (i<mat[i].length-1) {
+						System.out.println("Down "+ mat[i+1][j]);
+					}
+					if (i>0) {
+						System.out.println("up "+ mat[i-1][j]);						
+					}
+					
 				}
 			}
 		}
