@@ -2,7 +2,7 @@ package application;
 
 import java.util.Scanner;
 
-public class for6 {
+public class For6 {
 
 	public static void main(String[] args) {
 		/*
