@@ -17,7 +17,7 @@ public class Media_pares {
 		System.out.print("Quantos numeros ira ter o vetor? ");
 		int n = sc.nextInt();
 		int par = 0;
-		int qtdpar = 0;
+		int qtdpar =0 ;
 		
 		int vetor[] = new int [n];
 		
